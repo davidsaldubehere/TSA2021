@@ -1,6 +1,6 @@
-from PyDictionary import PyDictionary
-
-dictionary=PyDictionary()
+#only one built in library
+import urllib.request
+#variable to keep track of the number of words converted
 count = 0
 #function that takes a pig latin string and converts it back to english
 def convertBack(pigLatin):
@@ -12,7 +12,12 @@ def convertBack(pigLatin):
 
     attempt1, attempt2 = pigLatin[:-2], pigLatin[-3]+pigLatin[:-3]
     #returns attemp1 if the word is in the dictionary, otherwise returns attempt2
-    return attempt1 if not dictionary.meaning(attempt1,True) is None else attempt2
+    url = f"http://wordnetweb.princeton.edu/perl/webwn?s={attempt1}"
+    #open the url and read the html and see if the words 'any results' is in the html
+    #this will tell us if the word is in the dictionary, so we return the correct word
+    with urllib.request.urlopen(url) as response:
+        html = response.read()
+        return attempt2 if b'any results' in html else attempt1
 
 #function that takes an argument and returns the string converted to pig latin
 def convertWord(word):
