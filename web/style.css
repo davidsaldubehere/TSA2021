@@ -30,6 +30,7 @@ nav{
     font-size: 36px;
     padding: 10px 0;
     color: var(--font-color);
+    border-radius: 0 0 20px 20px;
 }
 main{
     width: 100%;
