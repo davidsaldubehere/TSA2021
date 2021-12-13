@@ -7,7 +7,6 @@
     transition-duration: .5s;
     --style-one: #393E46;
     --font-color: #00ADB5;
-
 }
 button{
     background: var(--style-one);
@@ -72,9 +71,7 @@ textarea:focus{
     display:inline-block;
     padding: 0 5px;
 }
-
 .introduction{
-    
     position: relative;
     left: 50%;
     transform: translate(-50%);
@@ -84,12 +81,9 @@ textarea:focus{
     font-size: 20px;
     line-height: 200%;
     /* or 68px */
-
     text-align: center;
-
     color: #FFFFFF;
 }
-
 #left{
     display: flex;
     flex-direction: column;
