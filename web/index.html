@@ -17,10 +17,10 @@
     <main>
         <section id="left">
             
-            <textarea id="input"></textarea>
+            <textarea id="input" onfocus="input.value = ''"></textarea>
             <ul class="inputs">
                 <li>
-                    <button>Translate</button>
+                    <button onclick="convert()">Translate</button>
                 </li>
                 <li>
                     <button>Stop</button>
@@ -38,5 +38,7 @@
             <textarea id="output"></textarea>
         </section>
     </main>
+    <script type="text/javascript" src="/eel.js"></script>
+    <script defer src="app.js"></script>
 </body>
 </html>
