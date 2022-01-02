@@ -6,7 +6,7 @@ count = 0
 def convertBack(pigLatin):
     global count
     count+=1
-    #since there is no way to tell if the word started with a vowel or a consonant, we will perform both reversals and then compare with a dictionary
+    #since there is no way to tell if the word started with a vowel or a consonant, we will perform both reversals and then compare with an English dictionary
     #remove the 'ay' from the end of the word
     #remove the 'ay' from the end of the word and the last consonant to the beginning of the word
 
