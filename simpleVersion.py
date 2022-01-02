@@ -23,7 +23,7 @@ def convertBack(pigLatin):
 def convertWord(word):
     global count
     count+=1
-    #if the word starts with a vowel, add 'way' to the end of the word
+    #if the word starts with a vowel, add 'ay' to the end of the word
     if word[0] in 'aeiou':
         return word + 'ay'
     #if the word starts with a consonant, move the first consonant to the end of the word and add 'ay'
