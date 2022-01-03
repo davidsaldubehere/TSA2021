@@ -1,5 +1,7 @@
 #only one built in library
 import urllib.request
+#necessary to keep the console open for a few seconds after finishing
+import time
 #variable to keep track of the number of words converted
 count = 0
 #function that takes a pig latin string and converts it back to english
@@ -50,3 +52,5 @@ if count == 1:
     print(f'You converted ' + str(count) + ' word')
 else:
     print(f'You converted ' + str(count) + ' words')
+#keep the console open for three seconds
+time.sleep(3)
