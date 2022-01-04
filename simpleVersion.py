@@ -31,7 +31,7 @@ def convertWord(word):
     #if the word starts with a consonant, move the first consonant to the end of the word and add 'ay'
     else:
         return word[1:] + word[0] + 'ay'
-print("""𝓦𝓮𝓵𝓬𝓸𝓶𝓮 𝓽𝓸 𝓽𝓱𝓮 𝓟𝓲𝓰 𝓛𝓪𝓽𝓲𝓷 𝓽𝓻𝓪𝓷𝓼𝓵𝓪𝓽𝓸𝓻\n""")
+print("Welcome to the Pig Latin Translator!\n")
 #continuously ask if the user wants to convert a word to pig latin until the user responds no
 while True:
     #ask the user for a word
