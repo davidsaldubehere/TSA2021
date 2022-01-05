@@ -1,10 +1,10 @@
-#only one built in library
+#only built in libraries
 import urllib.request
 #necessary to keep the console open for a few seconds after finishing
 import time
 #variable to keep track of the number of words converted
 count = 0
-#function that takes a pig latin string and converts it back to english
+#function that takes a Pig Latin string and converts it back to English
 def convertBack(pigLatin):
     global count
     count+=1
@@ -14,11 +14,13 @@ def convertBack(pigLatin):
 
     attempt1, attempt2 = pigLatin[:-2], pigLatin[-3]+pigLatin[:-3]
     #returns attemp1 if the word is in the dictionary, otherwise returns attempt2
+    #source is the princeton English dictionary
     url = f"http://wordnetweb.princeton.edu/perl/webwn?s={attempt1}"
     #open the url and read the html and see if the words 'any results' is in the html
     #this will tell us if the word is in the dictionary, so we return the correct word
     with urllib.request.urlopen(url) as response:
         html = response.read()
+        #returns attempt1 if the word is in the dictionary, otherwise returns attempt2
         return attempt2 if b'any results' in html else attempt1
 
 #function that takes an argument and returns the string converted to pig latin
@@ -36,7 +38,7 @@ print("Welcome to the Pig Latin Translator!\n")
 while True:
     #ask the user for a word
     userInput = input('Enter a word to convert to pig latin: \nIf you want to stop, type "stop"\nIf you want to convert pig latin back to english, type "back"\n')
-    #if the user responds no, break out of the loop
+    #if the user responds no, end the loop
     if userInput == 'stop':
         break
     #if the user responds back, print the pig latin word coverted back to english
@@ -52,5 +54,5 @@ if count == 1:
     print(f'You converted ' + str(count) + ' word')
 else:
     print(f'You converted ' + str(count) + ' words')
-#keep the console open for three seconds
+#keep the console open for three seconds to allow the user to see the results before closing the console
 time.sleep(3)

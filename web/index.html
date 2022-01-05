@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <!--Adds the font to the website in case the user's browser does not have it by default (fallback)-->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
     </style>
@@ -12,33 +13,31 @@
 </head>
 <body>
     <nav>
-        Pig Latin Translator
+        Pig Latin Translator  <!--Functions as the title bar-->
     </nav>
     <main>
         <section id="left">
-            
-            <textarea id="input" onfocus="input.value = ''" spellcheck="false"></textarea>
+            <textarea id="input" onfocus="input.value = ''" spellcheck="false"></textarea> <!--Text area for user input-->
             <ul class="inputs">
                 <li>
-                    <button onclick="convert()">Translate</button>
+                    <button onclick="convert()">Translate</button> <!--Button to convert Pig Latin to English-->
                 </li>
                 <li>
-                    <button onclick="stop()">Stop</button>
+                    <button onclick="stop()">Stop</button> <!--Button to stop the translation loop-->
                 </li>
                 <li>
-                    <button onclick="reverse()">Reverse</button>
+                    <button onclick="reverse()">Reverse</button> <!--Button to reverse the translation from Pig Latin to English-->
                 </li>
             </ul>
             <div class="introduction">
-                Welcome to the Pig Latin Translator. To begin, enter a word in the input section and click "Translate".
+                Welcome to the Pig Latin Translator. To begin, enter a word in the input section and click "Translate". <!--Simple introduction text-->
             </div>
-            
         </section>
         <section id="right">
-            <textarea id="output" spellcheck="false"></textarea>
+            <textarea id="output" spellcheck="false"></textarea> <!--Text area for the translated output-->
         </section>
     </main>
-    <script type="text/javascript" src="/eel.js"></script>
-    <script defer src="app.js"></script>
+    <script type="text/javascript" src="/eel.js"></script> <!--Eel.js library IGNORE THIS-->
+    <script defer src="app.js"></script> <!--Included JavaScript file-->
 </body>
 </html>

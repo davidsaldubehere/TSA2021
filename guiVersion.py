@@ -3,7 +3,7 @@ import eel
 import urllib.request
 #variable to keep track of the number of words converted
 count = 0
-#function that takes a pig latin string and converts it back to english
+#function that takes a Pig Latin string and converts it back to English
 @eel.expose
 def convertBack(pigLatin):
     global count
@@ -14,11 +14,13 @@ def convertBack(pigLatin):
 
     attempt1, attempt2 = pigLatin[:-2], pigLatin[-3]+pigLatin[:-3]
     #returns attemp1 if the word is in the dictionary, otherwise returns attempt2
+    #source is the princeton English dictionary
     url = f"http://wordnetweb.princeton.edu/perl/webwn?s={attempt1}"
     #open the url and read the html and see if the words 'any results' is in the html
     #this will tell us if the word is in the dictionary, so we return the correct word
     with urllib.request.urlopen(url) as response:
         html = response.read()
+        #returns attempt1 if the word is in the dictionary, otherwise returns attempt2
         return attempt2 if b'any results' in html else attempt1
 
 #function that takes an argument and returns the string converted to pig latin
@@ -38,5 +40,6 @@ def convertWord(word):
 def returnWords():
     return count
 
+#begins the main loop and loads the GUI
 eel.init('web')
 eel.start('index.html')
