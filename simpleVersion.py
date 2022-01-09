@@ -54,5 +54,5 @@ if count == 1:
     print(f'You converted ' + str(count) + ' word')
 else:
     print(f'You converted ' + str(count) + ' words')
-#keep the console open for three seconds to allow the user to see the results before closing the console
-time.sleep(3)
+#keep the console open for ten seconds to allow the user to see the results before closing the console
+time.sleep(10)
